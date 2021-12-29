@@ -38,7 +38,7 @@
         <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
     <picassoSite>Customer_Service1</picassoSite>
-    <selfRegistration>false</selfRegistration>
+    <selfRegistration>true</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>Customer_Service</site>
     <status>Live</status>
