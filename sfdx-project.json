@@ -1,22 +1,12 @@
-
-
 {
     "packageDirectories": [
-
         {
             "path": "force-app",
-            "package": "basePackage",
-            "versionName": "ver 1.0",
-            "versionNumber": "1.0.0.NEXT",
             "default": true
         }
     ],
-    "name": "StudentPrepShop",
+    "name": "project-2-data-warriors",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "52.0",
-    "packageAliases": {
-
-        "basePackage": "0Ho5j000000XZGeCAO"
-    }
+    "sourceApiVersion": "52.0"
 }
