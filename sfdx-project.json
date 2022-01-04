@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "testPak",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionName": "winter2021",
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "name": "StudentPrepShop",
@@ -13,6 +13,8 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "52.0",
     "packageAliases": {
-        "testPak": "0Ho5j000000XZGPCA4"
+        "testPak": "0Ho5j000000XZGPCA4",
+        "testPak@1.0.0-2": "04t5j000000Llm4AAC",
+        "testPak@1.0.0-3": "04t5j000000Llm9AAC"
     }
 }
