@@ -19,19 +19,23 @@
                 <field>ProductCode</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Discount_Percentage__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>ListPrice</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>UnitPrice</field>
+                <field>Quantity</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Quantity</field>
+                <field>UnitPrice</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>TotalPrice</field>
@@ -90,7 +94,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h3F0000062hFp</masterLabel>
+        <masterLabel>00hR0000004ZhIH</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
