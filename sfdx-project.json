@@ -11,7 +11,7 @@
             "default": true
         }
     ],
-    "name": "StudentPrepShop",
+    "name": "",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "52.0",
