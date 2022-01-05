@@ -2,11 +2,18 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": true
+            "default": true,
+            "package": "base-package",
+            "versionName": "Version 1.0",
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "name": "project-2-data-warriors",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "52.0"
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "base-package": "0Ho5f000000k9tdCAA",
+        "base-package@1.0.0-1": "04t5f000000W7v1AAC"
+    }
 }

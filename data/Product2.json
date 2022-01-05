@@ -1,0 +1,160 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref1"
+            },
+            "Name": "No. 12 Pencil",
+            "Product_Price__c": 2.99,
+            "Family": "Pencils",
+            "Description": "desc",
+            "ProductCode": "1234",
+            "IsActive": true,
+            "StockKeepingUnit": "651065"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref2"
+            },
+            "Name": "Pencil v1",
+            "Product_Price__c": 0.99,
+            "Family": "Pencils",
+            "Description": "It's a school supply",
+            "ProductCode": "1",
+            "IsActive": true,
+            "StockKeepingUnit": "12345"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref3"
+            },
+            "Name": "Pencil v2",
+            "Product_Price__c": 2.99,
+            "Family": "Pencils",
+            "Description": "It's a school supply",
+            "ProductCode": "2",
+            "IsActive": true,
+            "StockKeepingUnit": "12346"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref4"
+            },
+            "Name": "Pen v1",
+            "Product_Price__c": 3.99,
+            "Family": "Pens",
+            "Description": "It's a school supply",
+            "ProductCode": "3",
+            "IsActive": true,
+            "StockKeepingUnit": "12347"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref5"
+            },
+            "Name": "Sharpener",
+            "Product_Price__c": 0.99,
+            "Family": "Pencil Sharpener",
+            "Description": "It's a school supply",
+            "ProductCode": "4",
+            "IsActive": true,
+            "StockKeepingUnit": "12348"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref6"
+            },
+            "Name": "Highlighter v1",
+            "Product_Price__c": 1.99,
+            "Family": "Highlighters",
+            "Description": "It's a school supply",
+            "ProductCode": "5",
+            "IsActive": true,
+            "StockKeepingUnit": "12349"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref7"
+            },
+            "Name": "Marker v1",
+            "Product_Price__c": 1.49,
+            "Family": "Markers",
+            "Description": "It's a school supply",
+            "ProductCode": "6",
+            "IsActive": true,
+            "StockKeepingUnit": "12350"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref8"
+            },
+            "Name": "Star Notebook",
+            "Product_Price__c": 5.89,
+            "Family": "Notebooks",
+            "Description": "It's a school supply",
+            "ProductCode": "7",
+            "IsActive": true,
+            "StockKeepingUnit": "12351"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref9"
+            },
+            "Name": "3-Ring-Binder",
+            "Product_Price__c": 2.49,
+            "Family": "Binders",
+            "Description": "It's a school supply",
+            "ProductCode": "8",
+            "IsActive": true,
+            "StockKeepingUnit": "12352"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref10"
+            },
+            "Name": "Tex Calculator",
+            "Product_Price__c": 59.99,
+            "Family": "Calculators",
+            "Description": "It's a school supply",
+            "ProductCode": "9",
+            "IsActive": true,
+            "StockKeepingUnit": "12353"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref11"
+            },
+            "Name": "Large Sticky Notes",
+            "Product_Price__c": 0.29,
+            "Family": "Accessories",
+            "Description": "It's a school supply",
+            "ProductCode": "10",
+            "IsActive": true,
+            "StockKeepingUnit": "12354"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref12"
+            },
+            "Name": "Promotional Item",
+            "Product_Price__c": 0.1,
+            "Family": "Other",
+            "Description": "It's a school supply",
+            "ProductCode": "11",
+            "IsActive": true,
+            "StockKeepingUnit": "12355"
+        }
+    ]
+}
