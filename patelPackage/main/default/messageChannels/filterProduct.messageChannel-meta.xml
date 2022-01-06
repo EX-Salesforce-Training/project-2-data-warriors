@@ -6,4 +6,5 @@
         <fieldName>filterData</fieldName>
         <description>Current product filters</description>
     </lightningMessageFields>
+
 </LightningMessageChannel>
