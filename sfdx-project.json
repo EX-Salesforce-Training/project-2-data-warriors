@@ -1,22 +1,27 @@
-
-
 {
     "packageDirectories": [
-
         {
-            "path": "force-app",
-            "package": "basePackage",
-            "versionName": "ver 1.0",
-            "versionNumber": "1.0.0.NEXT",
-            "default": true
+            "path": "patelPackage",
+            "package": "patelPackage",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": true,
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "subscriberPackageVersionId": "04t5f000000W7v1AAC"
+                }
+            ]
         }
     ],
-    "name": "",
+    "name": "project-2-data-warriors",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "52.0",
     "packageAliases": {
-
-        "basePackage": "0Ho5j000000XZGeCAO"
+        "base-package": "0Ho5f000000k9tdCAA",
+        "base-package@1.0.0-1": "04t5f000000W7v1AAC",
+        "patelPackage": "0Ho5j000000XZGjCAO",
+        "patelPackage@0.1.0-1": "04t5j000000LmwRAAS"
     }
 }
