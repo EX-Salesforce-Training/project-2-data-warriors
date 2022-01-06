@@ -1,11 +1,17 @@
 {
     "packageDirectories": [
         {
-            "path": "force-app",
+            "path": "force-colton",
             "default": true,
-            "package": "base-package",
+            "package": "colton-package",
             "versionName": "Version 1.0",
-            "versionNumber": "1.0.0.NEXT"
+            "versionNumber": "1.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "subscriberPackageVersionId":"04t5f000000W7v1AAC"
+                }
+            ]
         }
     ],
     "name": "project-2-data-warriors",
@@ -13,7 +19,6 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "52.0",
     "packageAliases": {
-        "base-package": "0Ho5f000000k9tdCAA",
-        "base-package@1.0.0-1": "04t5f000000W7v1AAC"
+        "colton-package": "0Ho5f000000PBIKCA4"
     }
 }
