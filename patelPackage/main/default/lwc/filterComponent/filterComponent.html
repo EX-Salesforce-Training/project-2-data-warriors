@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Filter">
+        <div class="slds-p-around_medium">
+            <lightning-input type='text' label='Product' onkeyup={inputHandler}></lightning-input>
+            <lightning-button label="Filter" onclick={clickHandler}></lightning-button>
+        </div>
+
+        <!-- <lighting-input type="text" label="Search for product" onkeyup={inputHandler}>
+        </lighting-input> 
+        <lightning-button label="Filter" onclick={clickHandler}></lightning-button> -->
+
+        <!-- <input type="text" onclick={inputHandler}> -->
+        <!-- <button onclick={clickHandler}>Click</button> -->
+
+
+        <template if:true={productList}>
+            <template for:each={productList} for:item='product'>
+                <div key={product.id}>
+                    <p>Product : {product.Name}</p>
+                </div>
+            </template>
+        </template>
+
+    </lightning-card>
+</template>

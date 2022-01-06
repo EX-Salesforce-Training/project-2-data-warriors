@@ -1,0 +1,8 @@
+public with sharing class FilterProductController {
+    @AuraEnabled (Cacheable = true)
+    public static List<Product2> getProduct(String value){
+        String key = '%' + value+ '%';
+        return [SELECT Id, Name, ProductCode, Description, Family, Product_Price__c FROM Product2 WHERE Name LIKE: key];
+        
+    }
+}
