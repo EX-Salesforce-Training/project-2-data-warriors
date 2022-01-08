@@ -13,7 +13,9 @@ export default class FilterComponent extends LightningElement {
     inputValue;
     productList=''
     price = 100
-    categoryValue
+    categoryValue={
+       
+    };
 
     filterData= {
         productList: this.productList,             
@@ -57,24 +59,24 @@ export default class FilterComponent extends LightningElement {
             }
         };
         publish(this.messageContext, FILTERLMS, messageSent);
-        console.log('data from click handler'+ messageSent.filterData);
+        console.log('data from click handler'+ JSON.stringify(messageSent.filterData));
         
     }
 
     priceHandler(event){
         const price = event.target.value;
-        this.filterData.price = price;
+        this.price = price;
+        console.log(price);
         
     }
 
     checkboxhandler(event){
-
         const {value} = event.target.dataset
-        console.log('value: '+ value);
-        this.categoryValue = {...value};
-
+        this.categoryValue = value;
 
         
+        // console.log('value: '+ value);
+        // this.categoryValue = value;   
     }
   
 
