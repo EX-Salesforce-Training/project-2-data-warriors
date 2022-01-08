@@ -28,4 +28,7 @@ public with sharing class OpportunityTriggerHelper {
         
         update accountRating;        	      
     }
+
+
+    
 }
