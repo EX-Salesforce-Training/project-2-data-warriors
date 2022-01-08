@@ -13,15 +13,7 @@ export default class FilterComponent extends LightningElement {
     inputValue;
     productList=''
     price = 100
-    categoryValue={
-       
-    };
-
-    filterData= {
-        productList: this.productList,             
-        price: this.price,
-        categoryValue: this.categoryValue
-    }
+    categoryValue=[];
 
     @wire(getObjectInfo,{objectApiName:PRODUCTOBJ})
     productObj
@@ -60,7 +52,6 @@ export default class FilterComponent extends LightningElement {
         };
         publish(this.messageContext, FILTERLMS, messageSent);
         console.log('data from click handler'+ JSON.stringify(messageSent.filterData));
-        
     }
 
     priceHandler(event){
@@ -69,18 +60,22 @@ export default class FilterComponent extends LightningElement {
         console.log(price);
         
     }
+    
 
     checkboxhandler(event){
         const {value} = event.target.dataset
-        this.categoryValue = value;
 
-        
-        // console.log('value: '+ value);
-        // this.categoryValue = value;   
+        if (event.target.checked) {
+            this.categoryValue.push(value);
+        } else {
+            const index = this.categoryValue.indexOf(value);
+            if (index > -1) {
+                this.categoryValue.splice(index);
+                console.log(this.categoryValue);
+            }
+        }
+
     }
-  
-
-
 
 
 }
