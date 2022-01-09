@@ -3,6 +3,7 @@ before delete, after insert, after update, after delete, after undelete) {
     Switch on Trigger.OperationType {
         when BEFORE_INSERT {
             
+
         } 
         when BEFORE_UPDATE {
             
