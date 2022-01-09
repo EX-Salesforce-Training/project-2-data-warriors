@@ -1,8 +1,12 @@
 {
     "packageDirectories": [
         {
+            "path": "force-app",
+            "default": true
+        },
+        {
             "path": "force-colton",
-            "default": true,
+            "default": false,
             "package": "colton-package",
             "versionName": "Version 1.0",
             "versionNumber": "1.1.0.NEXT",

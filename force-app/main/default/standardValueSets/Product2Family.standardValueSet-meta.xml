@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Writing Supplies</fullName>
+        <default>false</default>
+        <label>Writing Supplies</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Binders &amp; Folders</fullName>
+        <default>false</default>
+        <label>Binders &amp; Folders</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Notebooks</fullName>
+        <default>false</default>
+        <label>Notebooks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Backpacks</fullName>
+        <default>false</default>
+        <label>Backpacks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Arts &amp; Crafts</fullName>
+        <default>false</default>
+        <label>Arts &amp; Crafts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Calculators</fullName>
+        <default>false</default>
+        <label>Calculators</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accessories</fullName>
+        <default>false</default>
+        <label>Accessories</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Books</fullName>
+        <default>false</default>
+        <label>Books</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Calendars</fullName>
+        <default>false</default>
+        <label>Calendars</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Storage</fullName>
+        <default>false</default>
+        <label>Storage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sticky Note</fullName>
+        <default>false</default>
+        <label>Sticky Note</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electronics</fullName>
+        <default>false</default>
+        <label>Electronics</label>
+    </standardValue>
+</StandardValueSet>

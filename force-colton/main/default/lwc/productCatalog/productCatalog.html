@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <template if:true={searchBarVisible}>
+            <lightning-input
+                label="Search Key"
+                type="text"
+                onchange={handleSearchKeyChange}
+                class="search-bar"  
+            ></lightning-input> <!-- add search bar to .css file or find different existing slds class -->
+        </template>
+        <template if:false={products.data}>
+            <p>No products were found.</p>
+        </template>
+        <template if:true={products.data}>
+            <template if:true={products.data.records.length}>
+                <div class="content">
+                    <template for:each={products.data.records} for:item="product">
+                        <c-product-tile 
+                            key={product.Id}
+                            product={product}
+                            class="slds-var-m-around_x-small"
+                            onselected={handleSelectedProduct}
+                        ></c-product-tile> <!-- onselected={handleSelectedProduct} -->
+                    </template>
+                </div>
+                <c-paginator
+                    page-num={pageNum}
+                    page-size={products.data.pageSize}
+                    total-product-count={products.data.totalProductCount}
+                    onprevious={handlePreviousPage}
+                    onnext={handleNextPage} 
+                ></c-paginator>
+            </template>
+            <template if:false={products.data.records.length}>
+                <p>No products where found using you search criteria</p>
+            </template>
+            <template if:true={products.error}>
+                <p>An error has occured while trying to retrieve product data</p>
+            </template>
+        </template>
+    </div>
+</template>

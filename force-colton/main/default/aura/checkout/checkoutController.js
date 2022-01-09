@@ -1,5 +1,5 @@
 ({
-    myAction : function(component, event, helper) {
+    handleOrderSubmit : function(component, event) {
 
     }
 })

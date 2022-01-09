@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isExposed>true</isExposed>
+    <masterLabel>filterProduct</masterLabel>
+    <description>This event is fired when product filters change.</description>
+    <lightningMessageFields>
+        <fieldName>filterData</fieldName>
+        <description>Current product filters</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
