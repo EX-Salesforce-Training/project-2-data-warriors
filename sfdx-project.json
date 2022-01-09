@@ -14,6 +14,16 @@
                 {
                     "package": "base-package",
                     "subscriberPackageVersionId":"04t5f000000W7v1AAC"
+      {
+            "path": "patelPackage",
+            "package": "patelPackage",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "subscriberPackageVersionId": "04t5f000000W7v1AAC"
                 }
             ]
         }
@@ -23,6 +33,9 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "52.0",
     "packageAliases": {
-        "colton-package": "0Ho5f000000PBIKCA4"
+        "base-package": "0Ho5f000000k9tdCAA",
+        "base-package@1.0.0-1": "04t5f000000W7v1AAC",
+        "patelPackage": "0Ho5j000000XZGjCAO",
+        "patelPackage@0.1.0-1": "04t5j000000LmwRAAS"
     }
 }
