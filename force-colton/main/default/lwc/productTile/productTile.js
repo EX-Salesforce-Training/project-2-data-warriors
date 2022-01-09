@@ -6,6 +6,7 @@ import { publish, MessageContext } from 'lightning/messageService';
 import SELECTED_PRODUCT_MESSAGE from '@salesforce/messageChannel/SelectedProduct__c';
 
 export default class ProductTile extends LightningElement {
+    @api draggable;
 
     // Loads the context for the LMS
     @wire(MessageContext) messageContext;
@@ -20,12 +21,14 @@ export default class ProductTile extends LightningElement {
     set product(value) {
         this._product = value;
         this.name = value.Name;
+        this.displayImg = value.familyImag__c;
         this.prodCode = value.ProductCode;
-        this.family = value.family;
+        this.family = value.Family;
         this.price = value.Product_Price__c;
     }
 
     name;
+    displayImg;
     prodCode;
     family;
     price;
@@ -40,10 +43,5 @@ export default class ProductTile extends LightningElement {
         publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, {
             productId: this.product.Id
         });
-    }
-
-    // event to hand dragging tile
-    handleDragStart(event) {
-        event.dataTransfer.setData('product', JSON.stringify(this.product));
     }
 }

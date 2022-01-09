@@ -1,4 +1,4 @@
-public with sharing class ProductTriggerHelper {
+public with sharing class TriggerController {
     
     // Adds a standard pricebook entry on newly created products based on Standard Unit Price field.
     public static void addStandardPrice(Map<Id, Product2> newProducts) {

@@ -3,10 +3,10 @@ public with sharing class PagedResult {
     public Integer pageSize { get; set; }
 
     @AuraEnabled
-    public Integer pageNum { get; set; }
+    public Integer pageNumber { get; set; }
 
     @AuraEnabled
-    public Integer totalProductCount { get; set; }
+    public Integer totalItemCount { get; set; }
 
     @AuraEnabled
     public Object[] records { get; set; }

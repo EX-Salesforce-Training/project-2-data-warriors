@@ -16,6 +16,10 @@
             <property name="searchBarVisible" type="Boolean" label="Search bar visible"/>
             <property name="tilesAreDraggable" type="Boolean" label="Tiles are draggable"/>
         </targetConfig>
+        <targetConfig targets="lightning__HomePage">
+            <property name="searchBarVisible" type="Boolean" label="Search bar visible"/>
+            <property name="tilesAreDraggable" type="Boolean" label="Tiles are draggable"/>
+        </targetConfig>
         <targetConfig targets="lightningCommunity__Default">
             <property name="searchBarVisible" type="Boolean" label="Search bar visible"/>
             <property name="tilesAreDraggable" type="Boolean" label="Tiles are draggable"/>

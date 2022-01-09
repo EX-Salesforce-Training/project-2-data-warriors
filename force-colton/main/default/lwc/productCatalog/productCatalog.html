@@ -8,8 +8,14 @@
                 class="search-bar"  
             ></lightning-input> <!-- add search bar to .css file or find different existing slds class -->
         </template>
+        <template if:true={allProducts.data}>
+            <template for:each={products.data} for:item="product">
+                <p key={product.Id}>{product.Name}</p>
+            </template>
+            
+        </template>
         <template if:false={products.data}>
-            <p>No products were found.</p>
+            <p>Somethings Wrong...</p>
         </template>
         <template if:true={products.data}>
             <template if:true={products.data.records.length}>
@@ -18,15 +24,16 @@
                         <c-product-tile 
                             key={product.Id}
                             product={product}
+                            draggable={tilesAreDraggable}
                             class="slds-var-m-around_x-small"
                             onselected={handleSelectedProduct}
                         ></c-product-tile> <!-- onselected={handleSelectedProduct} -->
                     </template>
                 </div>
                 <c-paginator
-                    page-num={pageNum}
+                    page-number={pageNumber}
                     page-size={products.data.pageSize}
-                    total-product-count={products.data.totalProductCount}
+                    total-item-count={products.data.totalItemCount}
                     onprevious={handlePreviousPage}
                     onnext={handleNextPage} 
                 ></c-paginator>

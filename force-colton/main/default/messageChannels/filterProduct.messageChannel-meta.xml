@@ -4,7 +4,7 @@
     <masterLabel>filterProduct</masterLabel>
     <description>This event is fired when product filters change.</description>
     <lightningMessageFields>
-        <fieldName>filterData</fieldName>
+        <fieldName>filter</fieldName>
         <description>Current product filters</description>
     </lightningMessageFields>
 </LightningMessageChannel>
