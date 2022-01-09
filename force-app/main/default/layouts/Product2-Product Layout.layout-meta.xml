@@ -12,16 +12,16 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Family</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Product_Brand__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Product_Price__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>DisplayUrl</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -34,8 +34,12 @@
                 <field>ProductCode</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>familyImag__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Family</field>
+                <field>DisplayUrl</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

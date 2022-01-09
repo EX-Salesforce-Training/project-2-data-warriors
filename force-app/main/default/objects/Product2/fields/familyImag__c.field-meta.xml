@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>familyImag__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( CASE( Family , &quot;/familyImage/product-family-icons/writing-supplies-icon.png&quot;, 
+&quot;Notebooks&quot;, &quot;/familyImage/product-family-icons/notebook-icon.png&quot;,
+&quot;Backpacks&quot;, &quot;/familyImage/product-family-icons/backpack-icon.png&quot;,
+&quot;Arts &amp; Crafts&quot;, &quot;/familyImage/product-family-iconsarts-and-crafts-icon.png&quot;,
+&quot;Calculators&quot;, &quot;/familyImage/product-family-icons/calculator-icon.png&quot;,
+&quot;Accessories&quot;, &quot;/familyImage/product-family-icons/accessories-icon.png&quot;,
+&quot;Books&quot;, &quot;/familyImage/product-family-icons/books-icon.png&quot;,
+&quot;Calendars&quot;, &quot;/familyImage/product-family-icons/calendar-icon.png&quot;,
+&quot;Storage&quot;, &quot;/familyImage/product-family-icons/storage-icon.png&quot;,
+&quot;Sticky Notes&quot;, &quot;/familyImage/product-family-icons/sticky-note-icon.png&quot;,
+&quot;Electronics&quot;, &quot;/familyImage/product-family-icons/electronics-icon.png&quot;) , &quot;Product Category&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Family Image</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
