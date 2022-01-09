@@ -4,6 +4,16 @@
             "path": "force-app",
             "default": true
         },
+        {
+            "path": "force-colton",
+            "default": false,
+            "package": "colton-package",
+            "versionName": "Version 1.0",
+            "versionNumber": "1.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "subscriberPackageVersionId":"04t5f000000W7v1AAC"
       {
             "path": "patelPackage",
             "package": "patelPackage",
