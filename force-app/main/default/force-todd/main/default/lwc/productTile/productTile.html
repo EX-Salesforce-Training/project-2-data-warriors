@@ -1,4 +1,5 @@
 <template>
+    <!-- <div>
         <a onclick={handleClick}>
             <div class="content">
                 <img
@@ -21,4 +22,31 @@
                 </div>
             </div>
         </a>
+    </div> -->
+
+    <lightning-card>
+        <template if:true = {ProductList}>
+            <template for:each = {ProductList} for:item = "Product">
+                <div key = {Product.Id}>
+                    <a onclick={handleClick}>
+                        <div class="content">
+                            <img src="https://d1amk1w0mr5k0.cloudfront.net/blog/wp-content/uploads/2018/08/GettyImages-802465010-1.jpg" class="product slds-align_absolute-center" alt="Product picture" />
+                            <div>
+                                <p class="title slds-align_absolute-center">{Product.Name}</p>
+                                <p class="slds-align_absolute-center">
+                                    Price:&nbsp;
+                                    <lightning-formatted-number format-style="currency" currency-code="USD" value={Product.Product_Price__c} class="price"
+                                        maximum-fraction-digits="0"></lightning-formatted-number>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </template>
+            
+        </template>
+        <template if:false = {ProductList}>
+            <p>Error</p>
+        </template>
+    </lightning-card>
 </template>
