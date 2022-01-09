@@ -11,7 +11,7 @@ before delete, after insert, after update, after delete, after undelete) {
             
         }
         when AFTER_INSERT {
-
+           
         }
         when AFTER_UPDATE {
 
@@ -26,4 +26,5 @@ before delete, after insert, after update, after delete, after undelete) {
         }
         
     }
+
 }
