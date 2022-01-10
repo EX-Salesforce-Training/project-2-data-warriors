@@ -1,10 +1,14 @@
 import { LightningElement, api, wire } from 'lwc';
 import { publish, MessageContext } from 'lightning/messageService';
 import SELECTED_PRODUCT_MESSAGE from '@salesforce/messageChannel/SelectedProduct__c';
+
+
+
 import getProduct from '@salesforce/apex/ProductController.getProduct';
 
 export default class ProductTile extends LightningElement { 
     @api product
+    inputValue
     // @wire(getProduct)
     // prod({data, error}) {
     //     if(data) {
@@ -35,16 +39,24 @@ export default class ProductTile extends LightningElement {
     // }
 
     pictureUrl;
-    name;
+    namee = "Deep Patel";
     price;
 
     handleClick(event) {
         
-        console.log('Data: ' + event.target.value);
-        console.log('Data Value: ' + event.target.dataset.value);
+        // console.log('Data: ' + event.target.value);
+        // console.log('Data Value: ' + event.target.dataset.value);
 
-        const {id} = event.target.value;
-      
-        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, id);
+        this.inputValue= event.target.value;
+        let message={
+            productId:{
+                value: this.inputValue,
+         
+                
+            }
+        }
+        console.log(message);
+
+        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE,message );
     }
 }

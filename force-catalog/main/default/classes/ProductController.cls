@@ -78,19 +78,13 @@ public with sharing class ProductController {
     public static Product2 getProductFromId(String Id) {
         Product2 product;
         if(Schema.SObjectType.Product2.isAccessible()){
-            String ProductId = ID;
+            String ProductId = Id;
 			 product = [SELECT Name, ProductCode, Product_Price__c FROM Product2 WHERE Id = :ProductId];
         }
 		
         return product;
     }
 
-    @AuraEnabled (Cacheable = true)
-    public static List<Product2> getProduct(String value){
-        String key = '%' + value+ '%';
-        return [SELECT Id, Name, ProductCode, Description, Family, Product_Price__c FROM Product2 WHERE Name LIKE: key];
-        
-    }
 
     @AuraEnabled(cacheable=true)
     public static List<Product2> getAllProducts(){
@@ -102,8 +96,8 @@ public with sharing class ProductController {
     }
 
     @AuraEnabled (Cacheable = true)
-    public static List<Product2> getAllProduct(){
-        return [SELECT Id, Name, ProductCode, Description, Family, Product_Price__c FROM Product2 WHERE Name =: 'Pencil v1' limit 1];
+    public static List<Product2> getOneProduct(){
+        return [SELECT Id, Name, ProductCode, Description, Family, Product_Price__c FROM Product2 WHERE Name =: 'Pencil' limit 1];
         
     }
 

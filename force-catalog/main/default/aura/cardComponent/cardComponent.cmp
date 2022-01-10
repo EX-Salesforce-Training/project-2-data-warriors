@@ -1,9 +1,11 @@
-<aura:component controller='ProductController' implements="flexipage:availableForAllPageTypes" access="global">
+<aura:component controller="ProductController" implements="flexipage:availableForAllPageTypes" access="global">
 
+
+
+    <aura:attribute name="messageRecieved" type="String" />
     <aura:attribute name="productList" type="Product2[]" />
 
-    <lightning:messageChannel type="SelectedProduct__c" aura:id="SelectedProduct" onMessage="{!c.handleMessage}"
-        scope="APPLICATION" />
+    <lightning:messageChannel type="SelectedProduct__c" onMessage="{!c.handleMessage}" scope="APPLICATION" />
 
 
 
@@ -32,5 +34,13 @@
             </article>
 
         </aura:iteration>
+        <div class="slds-p-around_medium">
+            <h1>Message: </h1>
+            <p>{!v.messageRecieved}</p>
+
+            <lightning:button label="Call server" onclick="{!c.getProducts}" />
+        </div>
+
+
     </lightning:card>
 </aura:component>

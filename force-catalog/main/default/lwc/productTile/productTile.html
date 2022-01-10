@@ -28,7 +28,7 @@
         <template if:true={product}>
             <template for:each={product} for:item="Product">
                 <div key={Product.Id}>
-                    <a onclick={handleClick} value={Product.Id}>
+                    <a value={Product.Id}>
                         <div class="content">
                             <img src="https://d1amk1w0mr5k0.cloudfront.net/blog/wp-content/uploads/2018/08/GettyImages-802465010-1.jpg"
                                 class="product slds-align_absolute-center" alt="Product picture" />
@@ -41,7 +41,7 @@
                                     </lightning-formatted-number>
                                 </p>
                                 <lightning-button class="slds-align_absolute-center" label="Detail"
-                                    data-value={Product.Id} value={Product.Id}>
+                                    data-value={Product.Id} value={Product.Id} onclick={handleClick}>
                                 </lightning-button>
                             </div>
 
