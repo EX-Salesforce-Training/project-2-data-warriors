@@ -84,6 +84,7 @@ export default class ProductCatalog extends LightningElement {
         console.log(message.filters.inputValue);
         this.filters = {...message.filters};
         console.log("filters: " + this.filters);
+        console.log("filters Category: " + this.filters.categories);
         this.pageNumber = 1;
     }
 

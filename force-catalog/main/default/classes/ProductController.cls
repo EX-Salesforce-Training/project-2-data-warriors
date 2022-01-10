@@ -25,7 +25,7 @@ public with sharing class ProductController {
         if(filters != null) {
             price = filters.price;
             categories = filters.categories;
-            System.debug('Price & Categories: ' + price + categories);
+            System.debug('Categories: ' +  categories);
             if(!String.isEmpty(filters.inputValue)) {
                 key = '%' + filters.inputValue + '%';
                 criteria.add('Name LIKE :key');
@@ -35,9 +35,10 @@ public with sharing class ProductController {
                 price = filters.price;
                 criteria.add('Product_Price__c <= :price');
             }
-            if (filters.categories != null) {
+            if (filters.categories!= null && !filters.categories.isEmpty()) {
                 categories = filters.categories;
                 criteria.add('Family IN :categories');
+                System.debug('Categories: ' +  categories);
             }
             if (criteria.size() > 0) {
                 whereClause = 'WHERE ' + String.join(criteria, ' AND ');

@@ -42,8 +42,9 @@ export default class ProductTile extends LightningElement {
         
         console.log('Data: ' + event.target.value);
         console.log('Data Value: ' + event.target.dataset.value);
+
         const {id} = event.target.value;
-        let message = {messageText: id};
-        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, message);
+      
+        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, id);
     }
 }

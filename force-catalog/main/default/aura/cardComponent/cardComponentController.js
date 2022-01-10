@@ -15,9 +15,9 @@
         $A.enqueueAction(action);
     },
 
-    handleMessage : function(component, event, helper) {
+    handleMessage : function(component, event, message) {
         if(event != null) {
-            const message = event.getParam("productId");
+            const message = event.getParam();
             component.set("v.productList", "message" + message);
             console.log("message is: " + message);
         }

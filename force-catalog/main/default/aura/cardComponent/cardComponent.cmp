@@ -2,8 +2,8 @@
 
     <aura:attribute name="productList" type="Product2[]" />
 
-    <lightning:messageChannel type="SelectedProduct__c" aura:id="SELECTED_PRODUCT_MESSAGE"
-        onMessage="{!c.handleMessage}" scope="APPLICATION" />
+    <lightning:messageChannel type="SelectedProduct__c" aura:id="SelectedProduct" onMessage="{!c.handleMessage}"
+        scope="APPLICATION" />
 
 
 
