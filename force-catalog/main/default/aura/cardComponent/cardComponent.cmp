@@ -3,44 +3,49 @@
 
 
     <aura:attribute name="messageRecieved" type="String" />
+    <aura:attribute name="showDetail" type="Boolean" />
     <aura:attribute name="productList" type="Product2[]" />
 
     <lightning:messageChannel type="SelectedProduct__c" onMessage="{!c.handleMessage}" scope="APPLICATION" />
-    <lightning:messageChannel type="SelectedProduct__c" aura:id="selectedProduct"/>
+    <lightning:messageChannel type="SelectedProduct__c" aura:id="selectedProduct" />
 
 
 
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="render" value="{!this}" action="{!c.doRender}" />
 
+
+
+
+    <div class="slds-p-around_medium">
+        <h1>Message: </h1>
+        <p>{!v.messageRecieved}</p>
+        <lightning:button label="Call server" onclick="{!c.getProducts}" />
+    </div>
     <lightning:card variant="Narrow" title="Product Detail" iconName="standard:account">
-            <aura:iteration items="{!v.productList}" var="product">
-                <article class="slds-tile slds-tile_board slds-text-align_center">
-                    <img src="https://d1amk1w0mr5k0.cloudfront.net/blog/wp-content/uploads/2018/08/GettyImages-802465010-1.jpg"
-                        class="product" alt="Product picture" />
-                    <h3 class="slds-tile__title slds-truncate" title="Anypoint Connectors">
-                        Code: {!product.ProductCode}
-                    </h3>
-                    <div class="slds-tile__detail">
-                        <p class="slds-text-heading_medium">Name: {!product.Name}</p>
-                        <p class="slds-text-heading_small">Price: ${!product.Product_Price__c}</p>
-                        <p class="slds-truncate" title="Company One">
-                            <a href="#">Category: {!product.Family}</a>
-                        </p>
-                        <p class="slds-truncate" title="Closing 9/30/2015">Description: {!product.Description}</p>
-                    </div>
+        <aura:iteration items="{!v.productList}" var="product">
+            <article class="slds-tile slds-tile_board slds-text-align_center">
+                <img src="https://d1amk1w0mr5k0.cloudfront.net/blog/wp-content/uploads/2018/08/GettyImages-802465010-1.jpg"
+                    class="product" alt="Product picture" />
+                <h3 class="slds-tile__title slds-truncate" title="Anypoint Connectors">
+                    Code: {!product.ProductCode}
+                </h3>
+                <div class="slds-tile__detail">
+                    <p class="slds-text-heading_medium">Name: {!product.Name}</p>
+                    <p class="slds-text-heading_small">Price: ${!product.Product_Price__c}</p>
+                    <p class="slds-truncate" title="Company One">
+                        <a href="#">Category: {!product.Family}</a>
+                    </p>
+                    <p class="slds-truncate" title="Closing 9/30/2015">Description: {!product.Description}</p>
+                </div>
 
-                    <lightning:button label="Add To Cart" onclick="{!c.handleProductSelect}" value="{product.Id}"></lightning:button>
-                </article>
+                <!-- <lightning:button label="Buy Now" onclick="{!c.handleProductSelect}" value="{product.Id}">
+                </lightning:button> -->
 
-            </aura:iteration>
-        <div class="slds-p-around_medium">
-            <h1>Message: </h1>
-            <p>{!v.messageRecieved}</p>
-            <lightning:button label="Call server" onclick="{!c.getProducts}" />
-        </div>
+                <c:thankYouComponent></c:thankYouComponent>
+            </article>
 
-
-
+        </aura:iteration>
     </lightning:card>
 </aura:component>
