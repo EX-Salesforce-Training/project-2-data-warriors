@@ -1,0 +1,19 @@
+<aura:component controller="ProductController" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="total" type="Integer" default="0" />
+    <aura:attribute name="products" type="Id[]" />
+    <aura:attribute name="productId" type="Id" />
+    <aura:attribute name="accountId" type="Id" default="0" />
+
+
+    <!-- <aura:registerEvent name="checkout" type="c:checkout" /> -->
+
+    <lightning:messageChannel type="SelectedProduct__c" onMessage="{!c.handleMessage}" scope="APPLICATION" />
+
+    <lightning:card variant="Narrow" title="Product Detail" iconName="standard:account">
+        <article class="slds-tile slds-tile_board slds-text-align_center">
+            <aura:iteration items="{!v.products}" var="product">
+                <!-- <c:cartItem item="{!product}" /> -->
+            </aura:iteration>
+        </article>
+    </lightning:card>
+</aura:component>	

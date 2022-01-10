@@ -1,7 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import { publish, subscribe ,MessageContext } from 'lightning/messageService';
 import FILTERLMS from "@salesforce/messageChannel/filterProduct__c";
-import filterProducts from '@salesforce/apex/ProductController.getProduct';
 import PRODUCTOBJ from '@salesforce/schema/Product2'; 
 import {getObjectInfo,getPicklistValues} from 'lightning/uiObjectInfoApi';
 
@@ -27,14 +26,6 @@ export default class FilterComponent extends LightningElement {
     
     @wire(MessageContext)
     messageContext;
-
-    @wire(filterProducts,{value:'$inputValue'})
-    filteredProducts({data, error}){
-        if(data){
-            this.productList = data;
-            console.log('data from wire' + data);
-        }
-    }
 
 
     inputHandler(event){

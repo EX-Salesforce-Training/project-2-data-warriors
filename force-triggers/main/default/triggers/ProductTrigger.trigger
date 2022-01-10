@@ -11,10 +11,10 @@ before delete, after insert, after update, after delete, after undelete) {
             
         }
         when AFTER_INSERT {
-
+            TriggerController.addStandardPrice(Trigger.newMap);
         }
         when AFTER_UPDATE {
-
+            TriggerController.updateStandardPrice(Trigger.newMap);
         }
         when AFTER_DELETE {
             

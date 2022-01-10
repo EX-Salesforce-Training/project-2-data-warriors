@@ -2,10 +2,6 @@ import { LightningElement, api, wire } from 'lwc';
 import { publish, MessageContext } from 'lightning/messageService';
 import SELECTED_PRODUCT_MESSAGE from '@salesforce/messageChannel/SelectedProduct__c';
 
-
-
-import getProduct from '@salesforce/apex/ProductController.getProduct';
-
 export default class ProductTile extends LightningElement { 
     @api product
     inputValue

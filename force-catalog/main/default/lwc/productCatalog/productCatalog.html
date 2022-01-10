@@ -1,8 +1,8 @@
 <template>
-    <div class="slds-card slds-var-p-around_x-small">
+    <!-- <div class="slds-card slds-var-p-around_x-small">
         <template if:true={searchBarVisible}>
             <lightning-input label="Search Key" type="text" onchange={handleSearchKeyChange} class="search-bar">
-            </lightning-input> <!-- add search bar to .css file or find different existing slds class -->
+            </lightning-input> 
         </template>
         <template if:false={products.data}>
             <p>Somethings Wrong...</p>
@@ -13,7 +13,7 @@
                     <template for:each={products.data.records} for:item="product">
                         <c-product-tile key={product.Id} product={product} draggable={tilesAreDraggable}
                             class="slds-var-m-around_x-small" onselected={handleSelectedProduct}></c-product-tile>
-                        <!-- onselected={handleSelectedProduct} -->
+                        
                     </template>
                 </div>
                 <c-paginator page-number={pageNumber} page-size={products.data.pageSize}
@@ -27,5 +27,5 @@
                 <p>An error has occured while trying to retrieve product data</p>
             </template>
         </template>
-    </div>
+    </div> -->
 </template>

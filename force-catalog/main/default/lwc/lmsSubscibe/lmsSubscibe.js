@@ -23,8 +23,6 @@
 // }
 
 import { LightningElement, api, wire } from 'lwc';
-import getAllProducts from '@salesforce/apex/ProductController.getAllProducts';
-import getProductFamily from '@salesforce/apex/ProductController.getProductFamily';
 
 // Use LMS and message channels to pass selected product from an event
 import { subscribe, MessageContext, APPLICATION_SCOPE } from 'lightning/messageService';
@@ -33,7 +31,6 @@ import FILTERLMS from '@salesforce/messageChannel/filterProduct__c';
 
 // import apex method to get products from a controller class
 import getProducts from '@salesforce/apex/ProductController.getProducts';
-import getProduct from '@salesforce/apex/ProductController.getProduct';
 
 
 export default class ProductCatalog extends LightningElement {

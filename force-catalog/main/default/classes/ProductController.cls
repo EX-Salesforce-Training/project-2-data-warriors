@@ -110,19 +110,36 @@ public with sharing class ProductController {
         ];
     }
 
-    // Creating a new Transaction when customers hit the checkout button so that new receipts can be create with the products to link to it
+    // creates new order from account, date, and status.
     @AuraEnabled
-    public static String newOrder(Account customerAcc, Date startdate, String status) {
+    public static Id newOrder() {
+        Account a = new Account(Name='Guest ' + System.now());
+        try{
+            insert a;
+        }catch(Exception e) {
+            system.debug(e);
+        }
+
  		Order order = new Order();
-         order.AccountId = customerAcc.Id;
-         order.EffectiveDate = startdate;
-         order.Status = status;
+         order.AccountId = a.Id;
+         order.EffectiveDate = system.today();
+         order.Status = 'Draft';
 
         try{
             insert order;
         }catch(Exception e) {
             system.debug(e);
         }
-        return order.OrderNumber;
+        return order.Id;
+    }
+
+    @AuraEnabled
+    public static String addItemToOrder(Id OrderId){
+        try {
+            
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+        return '';
     }
 }

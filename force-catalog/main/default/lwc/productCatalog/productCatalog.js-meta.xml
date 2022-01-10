@@ -11,7 +11,7 @@
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
     </targets>
-    <targetConfigs>
+    <!-- <targetConfigs>
         <targetConfig targets="lightning__AppPage">
             <property name="searchBarVisible" type="Boolean" label="Search bar visible"/>
             <property name="tilesAreDraggable" type="Boolean" label="Tiles are draggable"/>
@@ -24,5 +24,5 @@
             <property name="searchBarVisible" type="Boolean" label="Search bar visible"/>
             <property name="tilesAreDraggable" type="Boolean" label="Tiles are draggable"/>
         </targetConfig>
-    </targetConfigs>
+    </targetConfigs> -->
 </LightningComponentBundle>
