@@ -4,13 +4,13 @@ import SELECTED_PRODUCT_MESSAGE from '@salesforce/messageChannel/SelectedProduct
 import getProduct from '@salesforce/apex/ProductController.getProduct';
 
 export default class ProductTile extends LightningElement { 
-    ProductList
-    @wire(getProduct)
-    prod({data, error}) {
-        if(data) {
-            this.ProductList = data;
-        }
-    } //Product to be displayed
+    @api product
+    // @wire(getProduct)
+    // prod({data, error}) {
+    //     if(data) {
+    //         this.ProductList = data;
+    //     }
+    // } //Product to be displayed
 
     @wire(MessageContext) messageContext;
 
@@ -38,9 +38,12 @@ export default class ProductTile extends LightningElement {
     name;
     price;
 
-    handleClick() {
-        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, {
-            productId: this.product.Id
-        });
+    handleClick(event) {
+        
+        console.log('Data: ' + event.target.value);
+        console.log('Data Value: ' + event.target.dataset.value);
+        const {id} = event.target.value;
+        let message = {messageText: id};
+        publish(this.messageContext, SELECTED_PRODUCT_MESSAGE, message);
     }
 }

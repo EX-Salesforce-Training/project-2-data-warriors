@@ -46,6 +46,7 @@ export default class ProductCatalog extends LightningElement {
     totalItemCount = 0;
     pageSize;
     filters={};
+    productList = ''
 
     //Loads the context for the LMS
     @wire(MessageContext) messageContext;
@@ -54,8 +55,9 @@ export default class ProductCatalog extends LightningElement {
     @wire(getProducts, { filters: '$filters', pageNumber: '$pageNumber'})
     products({data, error}) {
         if(data) {
-            console.log(data);
+            console.log('Data Without Stringify ' + data);
             console.log('Data: '+ JSON.stringify(data));
+            this.productList = data;
         }
         if(error) {
             console.log(error);

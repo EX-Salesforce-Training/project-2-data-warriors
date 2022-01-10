@@ -13,7 +13,7 @@ public with sharing class ProductController {
     }
 
     @AuraEnabled(Cacheable=true)
-    public static void getProducts(Filters filters){
+    public static List<Product2> getProducts(Filters filters){
         // storing SOQL statement in strings to keep query calls dynamic
         String key = '';
         String whereClause = '';
@@ -35,10 +35,10 @@ public with sharing class ProductController {
                 price = filters.price;
                 criteria.add('Product_Price__c <= :price');
             }
-            // if (filters.categories != null) {
-            //     categories = filters.categories;
-            //     criteria.add('Family IN :categories');
-            // }
+            if (filters.categories != null) {
+                categories = filters.categories;
+                criteria.add('Family IN :categories');
+            }
             if (criteria.size() > 0) {
                 whereClause = 'WHERE ' + String.join(criteria, ' AND ');
                 System.debug('where clause: ' + whereClause);
@@ -49,7 +49,7 @@ public with sharing class ProductController {
                        + 'FROM Product2 '+ whereClause
                        + ' ORDER BY Name';
         System.debug('SOQL: ' + query);
-        Database.query(query);
+        return Database.query(query);
         // // create integer to hold how many records we will LIMIT  in SOQL Query
         // Integer pageSize = ProductController.PAGE_SIZE;
 

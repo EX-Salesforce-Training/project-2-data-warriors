@@ -1,11 +1,12 @@
 <aura:component controller='ProductController' implements="flexipage:availableForAllPageTypes" access="global">
 
-    <lightning:messageChannel type="filterProduct__c" aura:id="SELECTED_PRODUCT_MESSAGE" onMessage="{!c.handleMessage}"
-        scope="APPLICATION" />
-
-
-
     <aura:attribute name="productList" type="Product2[]" />
+
+    <lightning:messageChannel type="SelectedProduct__c" aura:id="SELECTED_PRODUCT_MESSAGE"
+        onMessage="{!c.handleMessage}" scope="APPLICATION" />
+
+
+
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
