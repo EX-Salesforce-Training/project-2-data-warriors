@@ -1,0 +1,7 @@
+<template>
+    <template if:true={products}>
+        <template for:each={products.data} for:item="p">
+            <div key={p.Id}><p>Should see name here: {p.Name} </p></div>
+        </template>
+    </template>
+</template>

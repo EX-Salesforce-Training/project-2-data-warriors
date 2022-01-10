@@ -1,5 +1,0 @@
-({
-    handleOrderSubmit : function(component, event) {
-
-    }
-})

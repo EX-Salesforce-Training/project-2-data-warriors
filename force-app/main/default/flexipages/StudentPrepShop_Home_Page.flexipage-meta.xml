@@ -94,24 +94,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>productCatalog</componentName>
-            </componentInstance>
-        </itemInstances>
-        <name>bottomLeft</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>checkout</componentName>
-            </componentInstance>
-        </itemInstances>
-        <name>bottomRight</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
                 <componentName>home:eventContainer</componentName>
             </componentInstance>
         </itemInstances>
