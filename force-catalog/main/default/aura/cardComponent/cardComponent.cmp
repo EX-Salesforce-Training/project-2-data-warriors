@@ -17,12 +17,12 @@
 
 
 
-
+    <!-- 
     <div class="slds-p-around_medium">
         <h1>Message: </h1>
         <p>{!v.messageRecieved}</p>
         <lightning:button label="Call server" onclick="{!c.getProducts}" />
-    </div>
+    </div> -->
     <lightning:card variant="Narrow" title="Product Detail" iconName="standard:account">
         <aura:iteration items="{!v.productList}" var="product">
             <article class="slds-tile slds-tile_board slds-text-align_center">
