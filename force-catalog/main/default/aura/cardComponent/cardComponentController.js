@@ -3,12 +3,19 @@
         
     },
 
+    getProducts:function(component, event, helper) {
+        console.log(component.get("v.messageRecieved"));
+        let id = component.get("v.messageRecieved");
+        var action = component.get("c.getProductFromId");
+        action.setParam('Id', id);
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            if(state=== "SUCCESS"){
+                component.set("v.productList", response.getReturnValue());
+            }
+        });
 
-    doRender:function(component, event, helper){
-      let detail = component.get("v.showDetail");
-      if(detail){
-          helper.fetchProducts(component, helper);
-      }
+        $A.enqueueAction(action);
     },
 
     handleProductSelect: function (component, event, helper) {

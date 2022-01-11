@@ -46,7 +46,7 @@ public with sharing class ProductController {
             }
         }
 
-        String query = 'SELECT Id, ProductCode, familyImag__c, Family, Name, Product_Price__c, StockKeepingUnit '
+        String query = 'SELECT Id, ProductCode, DisplayUrl, Family, Name, Product_Price__c, StockKeepingUnit '
                        + 'FROM Product2 '+ whereClause
                        + ' ORDER BY Name';
         System.debug('SOQL: ' + query);
@@ -79,7 +79,7 @@ public with sharing class ProductController {
         Product2 product;
         if(Schema.SObjectType.Product2.isAccessible()){
             String ProductId = Id;
-			 product = [SELECT Name, ProductCode, Product_Price__c FROM Product2 WHERE Id = :ProductId];
+			 product = [SELECT Name, ProductCode, Product_Price__c, Family, DisplayUrl, Description FROM Product2 WHERE Id = :ProductId];
         }
 		
         return product;

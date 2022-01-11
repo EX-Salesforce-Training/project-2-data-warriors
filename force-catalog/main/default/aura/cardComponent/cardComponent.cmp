@@ -1,4 +1,5 @@
-<aura:component controller="ProductController" implements="flexipage:availableForAllPageTypes" access="global">
+<aura:component controller="ProductController" implements="flexipage:availableForAllPageTypes, forceCommunity:availableForAllPageTypes
+" access="global">
 
 
 
@@ -13,20 +14,17 @@
 
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler name="render" value="{!this}" action="{!c.doRender}" />
 
 
 
-    <!-- 
+    
     <div class="slds-p-around_medium">
-        <h1>Message: </h1>
-        <p>{!v.messageRecieved}</p>
-        <lightning:button label="Call server" onclick="{!c.getProducts}" />
-    </div> -->
+        <lightning:button label="View" onclick="{!c.getProducts}" />
+    </div>
     <lightning:card variant="Narrow" title="Product Detail" iconName="standard:account">
         <aura:iteration items="{!v.productList}" var="product">
             <article class="slds-tile slds-tile_board slds-text-align_center">
-                <img src="https://d1amk1w0mr5k0.cloudfront.net/blog/wp-content/uploads/2018/08/GettyImages-802465010-1.jpg"
+                <img src="{!product.DisplayUrl}"
                     class="product" alt="Product picture" />
                 <h3 class="slds-tile__title slds-truncate" title="Anypoint Connectors">
                     Code: {!product.ProductCode}
