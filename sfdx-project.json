@@ -2,10 +2,15 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": true,
-            "package": "base-package",
-            "versionName": "Version 1.0",
-            "versionNumber": "1.0.0.NEXT"
+            "default": false
+        },
+        {
+            "path": "force-catalog",
+            "default": true
+        },
+        {
+            "path": "force-triggers",
+            "default": false
         }
     ],
     "name": "project-2-data-warriors",

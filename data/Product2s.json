@@ -1,0 +1,160 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref1"
+            },
+            "Name": "Pencil",
+            "Product_Price__c": 2.99,
+            "Family": "Writing Supplies",
+            "Description": "Temp data",
+            "ProductCode": "1234",
+            "IsActive": true,
+            "StockKeepingUnit": "651065"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref2"
+            },
+            "Name": "Binder",
+            "Product_Price__c": 0.99,
+            "Family": "Binders & Folders",
+            "Description": "Temp data",
+            "ProductCode": "1",
+            "IsActive": true,
+            "StockKeepingUnit": "12345"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref3"
+            },
+            "Name": "Notebook",
+            "Product_Price__c": 2.99,
+            "Family": "Notebooks",
+            "Description": "Temporary data",
+            "ProductCode": "2",
+            "IsActive": true,
+            "StockKeepingUnit": "12346"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref4"
+            },
+            "Name": "Cool Backpack",
+            "Product_Price__c": 3.99,
+            "Family": "Backpacks",
+            "Description": "Temporary data",
+            "ProductCode": "3",
+            "IsActive": true,
+            "StockKeepingUnit": "12347"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref5"
+            },
+            "Name": "Pencil Sharpener",
+            "Product_Price__c": 0.99,
+            "Family": "Accessories",
+            "Description": "Temporary data",
+            "ProductCode": "4",
+            "IsActive": true,
+            "StockKeepingUnit": "12348"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref6"
+            },
+            "Name": "Scissors",
+            "Product_Price__c": 1.99,
+            "Family": "Arts & Crafts",
+            "Description": "Temporary data",
+            "ProductCode": "5",
+            "IsActive": true,
+            "StockKeepingUnit": "12349"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref7"
+            },
+            "Name": "Book of Math",
+            "Product_Price__c": 1.49,
+            "Family": "Books",
+            "Description": "Temporary data",
+            "ProductCode": "6",
+            "IsActive": true,
+            "StockKeepingUnit": "12350"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref8"
+            },
+            "Name": "2022 Calendar",
+            "Product_Price__c": 5.89,
+            "Family": "Calendars",
+            "Description": "Temporary data",
+            "ProductCode": "7",
+            "IsActive": true,
+            "StockKeepingUnit": "12351"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref9"
+            },
+            "Name": "File Cabinet",
+            "Product_Price__c": 29.99,
+            "Family": "Storage",
+            "Description": "Temporary data",
+            "ProductCode": "8",
+            "IsActive": true,
+            "StockKeepingUnit": "12352"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref10"
+            },
+            "Name": "Post its",
+            "Product_Price__c": 5.99,
+            "Family": "Sticky Note",
+            "Description": "Temporary data",
+            "ProductCode": "9",
+            "IsActive": true,
+            "StockKeepingUnit": "12353"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref11"
+            },
+            "Name": "Headset",
+            "Product_Price__c": 30.29,
+            "Family": "Electronics",
+            "Description": "Temporary data",
+            "ProductCode": "10",
+            "IsActive": true,
+            "StockKeepingUnit": "12354"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref12"
+            },
+            "Name": "Promotional Item",
+            "Product_Price__c": 0.1,
+            "Family": "Accessories",
+            "Description": "Temporary data",
+            "ProductCode": "11",
+            "IsActive": true,
+            "StockKeepingUnit": "12355"
+        }
+    ]
+}
