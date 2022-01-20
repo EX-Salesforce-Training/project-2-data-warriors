@@ -2,15 +2,36 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": false
+            "default": false,
+            "package": "base-package",
+            "versionName": "Version 1.0",
+            "versionNumber": "1.0.0.NEXT"
         },
         {
             "path": "force-catalog",
-            "default": true
+            "default": true,
+            "package": "catalog-package",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "versionNumber": "1.0.0.LATEST"
+                }
+            ]
         },
         {
             "path": "force-triggers",
-            "default": false
+            "package": "triggers-package",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "base-package",
+                    "versionNumber": "1.0.0.LATEST"
+                }
+            ]
         }
     ],
     "name": "project-2-data-warriors",
@@ -19,6 +40,8 @@
     "sourceApiVersion": "52.0",
     "packageAliases": {
         "base-package": "0Ho5f000000k9tdCAA",
-        "base-package@1.0.0-1": "04t5f000000W7v1AAC"
+        "base-package@1.0.0-1": "04t5f000000W7v1AAC",
+        "catalog-package": "0Ho5f000000k9uWCAQ",
+        "triggers-package": "0Ho5f000000k9ubCAA"
     }
 }
