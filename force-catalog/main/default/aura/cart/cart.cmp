@@ -4,7 +4,6 @@
     <aura:attribute name="productId" type="Id" />
     <aura:attribute name="accountId" type="Id" default="0" />
 
-
     <!-- <aura:registerEvent name="checkout" type="c:checkout" /> -->
 
     <lightning:messageChannel type="SelectedProduct__c" onMessage="{!c.handleMessage}" scope="APPLICATION" />

@@ -51,26 +51,6 @@ public with sharing class ProductController {
                        + ' ORDER BY Name';
         System.debug('SOQL: ' + query);
         return Database.query(query);
-        // // create integer to hold how many records we will LIMIT  in SOQL Query
-        // Integer pageSize = ProductController.PAGE_SIZE;
-
-        // // integer to contain how many records to offset depending on page number in SOQL Query
-        // Integer offset = (pageNumber - 1) * pageSize;
-
-        // // store fields and query results in empty paged result object
-        // PagedResult result = new PagedResult();
-        // result.pageSize = pageSize;
-        // result.pageNumber = pageNumber;
-        // // use AggregateResult query count() to dynamically return number of records with given criteria
-        // result.totalItemCount = Database.countQuery(
-        //     'SELECT count() FROM Product2 ' + whereClause
-        // );
-        // // store query records returned after filters, limits, and enforcing security
-        // result.records = Database.query(
-        //     'SELECT Id, ProductCode, familyImag__c, Family, Name, Product_Price__c, StockKeepingUnit' +
-        //     ' FROM Product2 ' + whereClause + 
-        //     ' ORDER BY Name LIMIT :pageSize OFFSET :offset' 
-        // );
     }
 
     // Getting Information on a single product to display prices in the carts

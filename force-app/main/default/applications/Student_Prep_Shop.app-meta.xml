@@ -26,7 +26,6 @@
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Product2</tabs>
-    <tabs>Product_Brand__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Student_Prep_Shop_UtilityBar</utilityBar>
 </CustomApplication>

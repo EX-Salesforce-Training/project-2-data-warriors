@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <template if:false={productList}>
+            <p>Unable to retrieve product data...</p>
+        </template>
+        <template if:true={productList}>
+                <c-product-tile product={productList} draggable={tilesAreDraggable} class="slds-var-m-around_x-small"
+                    onselected={handleSelectedProduct}></c-product-tile>
+        </template>
+    </div>
+</template>
