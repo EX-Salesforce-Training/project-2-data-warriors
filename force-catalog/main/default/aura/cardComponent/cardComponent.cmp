@@ -1,8 +1,6 @@
 <aura:component controller="ProductController" implements="flexipage:availableForAllPageTypes, forceCommunity:availableForAllPageTypes
 " access="global">
 
-
-
     <aura:attribute name="messageRecieved" type="String" />
     <aura:attribute name="showDetail" type="Boolean" />
     <aura:attribute name="productList" type="Product2[]" />
@@ -10,14 +8,6 @@
     <lightning:messageChannel type="SelectedProduct__c" onMessage="{!c.handleMessage}" scope="APPLICATION" />
     <lightning:messageChannel type="SelectedProduct__c" aura:id="selectedProduct" />
 
-
-
-
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-
-
-
-    
     <div class="slds-p-around_medium">
         <lightning:button label="View" onclick="{!c.getProducts}" />
     </div>
@@ -37,13 +27,8 @@
                     </p>
                     <p class="slds-truncate" title="Closing 9/30/2015">Description: {!product.Description}</p>
                 </div>
-
-                <!-- <lightning:button label="Buy Now" onclick="{!c.handleProductSelect}" value="{product.Id}">
-                </lightning:button> -->
-
                 <c:thankYouComponent></c:thankYouComponent>
             </article>
-
         </aura:iteration>
     </lightning:card>
 </aura:component>

@@ -6,7 +6,6 @@
                 <lightning-slider label="Price" step='1' min='0' max='100' value={price} onchange={priceHandler}>
                 </lightning-slider>
             </div>
-
             <div>
                 <h1>Category</h1>
                 <template if:true={categories.data}>
@@ -16,14 +15,8 @@
                         </lightning-input>
                     </template>
                 </template>
-
-
             </div>
-
             <lightning-button label="Filter" onclick={clickHandler}></lightning-button>
-
         </div>
-
-
     </lightning-card>
 </template>

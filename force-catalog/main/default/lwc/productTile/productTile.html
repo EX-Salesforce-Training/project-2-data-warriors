@@ -1,36 +1,11 @@
 <template>
-    <!-- <div>
-        <a onclick={handleClick}>
-            <div class="content">
-                <img
-                    src={pictureUrl}
-                    class="product slds-align_absolute-center"
-                    alt="Product picture"
-                />
-                <div>
-                    <p class="title slds-align_absolute-center">{name}</p>
-                    <p class="slds-align_absolute-center">
-                        Price:&nbsp;
-                        <lightning-formatted-number
-                            format-style="currency"
-                            currency-code="USD"
-                            value={price}
-                            class="price"
-                            maximum-fraction-digits="0"
-                        ></lightning-formatted-number>
-                    </p>
-                </div>
-            </div>
-        </a>
-    </div> -->
-
     <lightning-card>
         <lightning-layout multiple-rows>
             <template if:true={product}>
                 <template for:each={product} for:item="Product">
                     <lightning-layout-item size="4" padding="around-small" key={Product.Id}>
 
-                        <a value={Product.Id}>
+                        <div>
                             <div class="content">
                                 <img src={Product.DisplayUrl}
                                     class="product slds-align_absolute-center" alt="Product picture" />
@@ -45,11 +20,9 @@
                                     <lightning-button class="slds-align_absolute-center" label="Detail"
                                         data-value={Product.Id} value={Product.Id} onclick={handleClick}>
                                     </lightning-button>
-
                                 </div>
-
                             </div>
-                        </a>
+                        </div>
 
                     </lightning-layout-item>
                 </template>

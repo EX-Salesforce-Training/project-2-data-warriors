@@ -10,7 +10,6 @@
                 component.set("v.productList", response.getReturnValue());
             }
         });
-
         $A.enqueueAction(createOrder);
     }
 })
